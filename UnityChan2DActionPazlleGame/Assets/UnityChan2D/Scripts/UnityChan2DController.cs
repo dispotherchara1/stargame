@@ -57,6 +57,13 @@ public class UnityChan2DController : MonoBehaviour
             bool jump = Input.GetButtonDown("Jump");
             Move(x, jump);
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            m_rigidbody2D.gravityScale *= -1;
+            gameObject.transform.localScale *= -1;
+            jumpPower *= -1;
+            maxSpeed *= -1;
+        }
     }
 
     void Move(float move, bool jump)

@@ -26,7 +26,7 @@ public class IntroCameraController : MonoBehaviour
 
         transform.position = new Vector3(newPosition, pos.y, pos.z);
 
-        if (Input.anyKeyDown) Application.LoadLevel(nextLevel);
+        if (Input.anyKeyDown) next();
     }
 
     void next()

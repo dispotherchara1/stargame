@@ -33,9 +33,12 @@ public class CameraController : MonoBehaviour
             }
         }
 
+        //カメラがストッパーの位置まで来たとき
         if (stopPosition.position.x - right.x < 0)
         {
+            //クリアの処理を行うメソッドを呼び出す
             StartCoroutine(INTERNAL_Clear());
+            //カメラの動きを止める
             enabled = false;
         }
     }
@@ -49,6 +52,7 @@ public class CameraController : MonoBehaviour
             player.SendMessage("Clear", SendMessageOptions.DontRequireReceiver);
         }
 
+        //三秒待つ
         yield return new WaitForSeconds(3);
 
         Application.LoadLevel(nextLevel);
