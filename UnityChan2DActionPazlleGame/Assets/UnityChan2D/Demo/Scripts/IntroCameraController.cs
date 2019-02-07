@@ -17,7 +17,7 @@ public class IntroCameraController : MonoBehaviour
 
         yield return new WaitForSeconds(GetComponent<AudioSource>().clip.length + 1);
 
-        Application.LoadLevel(nextLevel);
+        next();
     }
 
     void Update()
@@ -25,5 +25,12 @@ public class IntroCameraController : MonoBehaviour
         float newPosition = Mathf.SmoothStep(pos.x, target.position.x, Time.timeSinceLevelLoad / GetComponent<AudioSource>().clip.length);
 
         transform.position = new Vector3(newPosition, pos.y, pos.z);
+
+        if (Input.anyKeyDown) Application.LoadLevel(nextLevel);
+    }
+
+    void next()
+    {
+        Application.LoadLevel(nextLevel);
     }
 }
