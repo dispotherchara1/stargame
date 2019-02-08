@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
         {
             var pos = m_camera.transform.position;
 
-            if (Math.Abs(pos.x - target.position.x) >= 0.0000001f)
+            if (Math.Abs(pos.x - target.position.x) <= 0.0000001f)
             {
                 m_camera.transform.position = new Vector3(target.position.x, pos.y, pos.z);
             }
@@ -39,7 +39,7 @@ public class CameraController : MonoBehaviour
             //クリアの処理を行うメソッドを呼び出す
             StartCoroutine(INTERNAL_Clear());
             //カメラの動きを止める
-            enabled = false;
+            //enabled = false;
         }
     }
 

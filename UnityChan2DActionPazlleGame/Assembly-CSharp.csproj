@@ -67,9 +67,11 @@
      <Compile Include="Assets\UnityChan2D\Demo\Scripts\StartController.cs" />
      <Compile Include="Assets\UnityChan2D\Demo\Scripts\TimeController.cs" />
      <Compile Include="Assets\UnityChan2D\Scripts\UnityChan2DController.cs" />
+     <Compile Include="Assets\YamamotoOnly\CarryonCamera.cs" />
      <Compile Include="Assets\YamamotoOnly\CreateStage.cs" />
      <Compile Include="Assets\YamamotoOnly\GameManager.cs" />
      <Compile Include="Assets\YamamotoOnly\nabili.cs" />
+     <Compile Include="Assets\YamamotoOnly\OpenTheDoor.cs" />
      <None Include="Assets\UnityChan2D\Demo\Sounds\Voice\unity-chan_voice_list.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/user/Desktop/StarGame/UnityChan2DActionPazlleGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

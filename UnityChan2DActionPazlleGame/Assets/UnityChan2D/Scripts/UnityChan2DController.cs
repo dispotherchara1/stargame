@@ -17,6 +17,9 @@ public class UnityChan2DController : MonoBehaviour
 
     private State m_state = State.Normal;
 
+    GameObject manager;
+    GameManager gamemanage;
+
     void Reset()
     {
         Awake();
@@ -49,9 +52,15 @@ public class UnityChan2DController : MonoBehaviour
         m_rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    void Start()
+    {
+        //manager = GameObject.Find("GameManager");
+        //gamemanage = manager.GetComponent<GameManager>();
+    }
+
     void Update()
     {
-        if (m_state != State.Damaged)
+        if (m_state != State.Damaged /*&& gamemanage.Getgameover()==false*/)
         {
             float x = Input.GetAxis("Horizontal");
             bool jump = Input.GetButtonDown("Jump");
@@ -125,7 +134,7 @@ public class UnityChan2DController : MonoBehaviour
         m_animator.SetTrigger("Invincible Mode");
         m_state = State.Invincible;
     }
-
+    
     void OnFinishedInvincibleMode()
     {
         m_state = State.Normal;
@@ -137,4 +146,9 @@ public class UnityChan2DController : MonoBehaviour
         Damaged,
         Invincible,
     }
+    //void ColliderEnter2D(Collider col)
+    //{
+    //    if (col.gameObject.tag == ("Manager")) gamemanage.Setgameover(1);
+    //    else gamemanage.Setgameover(0);
+    //}
 }

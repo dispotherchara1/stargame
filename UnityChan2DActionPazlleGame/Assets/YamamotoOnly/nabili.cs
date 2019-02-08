@@ -14,6 +14,6 @@ public class nabili : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time,/*UnityChan.transform.position.y/10*/2), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time,UnityChan.transform.lossyScale.y/10), transform.position.z);
     }
 }
