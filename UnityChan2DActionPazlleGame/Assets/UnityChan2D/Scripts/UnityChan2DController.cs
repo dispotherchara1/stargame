@@ -54,25 +54,31 @@ public class UnityChan2DController : MonoBehaviour
 
     void Start()
     {
-        //manager = GameObject.Find("GameManager");
-        //gamemanage = manager.GetComponent<GameManager>();
     }
 
     void Update()
     {
-        if (m_state != State.Damaged /*&& gamemanage.Getgameover()==false*/)
+        if (m_state != State.Damaged )
         {
             float x = Input.GetAxis("Horizontal");
             bool jump = Input.GetButtonDown("Jump");
             Move(x, jump);
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            m_rigidbody2D.gravityScale *= -1;
-            gameObject.transform.localScale *= -1;
-            jumpPower *= -1;
-            maxSpeed *= -1;
-        }
+
+        //if (/*Input.GetKeyDown(KeyCode.A)*/Physics2D.gravity.y>0)
+        //{
+        //    //m_rigidbody2D.gravityScale *= -1;
+        //    gameObject.transform.localScale =new Vector3( -1,-1,0);
+        //    jumpPower = -1000;
+        //    maxSpeed = -10f;
+        //}
+        //if (/*Input.GetKeyDown(KeyCode.A)*/Physics2D.gravity.y<0)
+        //{
+        //    //m_rigidbody2D.gravityScale *= -1;
+        //    gameObject.transform.localScale =new Vector3( 1,1,0);
+        //    jumpPower = 1000;
+        //    maxSpeed = 10f;
+        //}
     }
 
     void Move(float move, bool jump)

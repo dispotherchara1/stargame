@@ -70,6 +70,7 @@
      <Compile Include="Assets\YamamotoOnly\CarryonCamera.cs" />
      <Compile Include="Assets\YamamotoOnly\CreateStage.cs" />
      <Compile Include="Assets\YamamotoOnly\GameManager.cs" />
+     <Compile Include="Assets\YamamotoOnly\Gravity.cs" />
      <Compile Include="Assets\YamamotoOnly\nabili.cs" />
      <Compile Include="Assets\YamamotoOnly\OpenTheDoor.cs" />
      <None Include="Assets\UnityChan2D\Demo\Sounds\Voice\unity-chan_voice_list.txt" />

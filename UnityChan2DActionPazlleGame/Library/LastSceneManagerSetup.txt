@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/YamamotoOnly/YamamotoScene.unity
+- path: Assets/YamamotoOnly/TestBaxeBallScene.unity
   isLoaded: 1
   isActive: 1
